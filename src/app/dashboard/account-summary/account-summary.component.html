@@ -1,0 +1,8 @@
+<mat-card *ngIf="accountData$ | async as accountData">
+    <mat-card-title>Account Summary</mat-card-title>
+    <mat-card-content>
+      <p>Total Balance: {{ accountData.balance | currency }}</p>
+      <p>Income: {{ accountData.income | currency }}</p>
+      <p>Expenses: {{ accountData.expenses | currency }}</p>
+    </mat-card-content>
+  </mat-card>
